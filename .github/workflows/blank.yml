@@ -35,4 +35,5 @@ jobs:
           netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
       # Run another command
       - name: Start pinggy
-        run: D:\pinggy.exe -p 443 -R0:localhost:8080 -L4300:localhost:4300 3tHLCenOPn3@a.pinggy.io
+        run: D:\pinggy.exe  -p 443 -R0:127.0.0.1:8000 -o StrictHostKeyChecking=no -o ServerAliveInterval=30 3tHLCenOPn3+tcp@free.pinggy.io
+        
